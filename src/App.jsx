@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import BookList from './components/Books/BookList';
 import Navbar from './components/Books/Navbar';
-import Categories from './components/Categories/Categories';
+import BooksPage from './Pages/BooksPage';
+import CategoryPage from './Pages/CategoryPage';
 
 const App = () => (
   <>
     <Navbar />
     <Routes>
-      <Route path="/" element={<BookList />} />
-      <Route path="/categories" element={<Categories />} />
+      <Route path="/" element={<BooksPage />} />
+      <Route path="/categories" element={<CategoryPage />} />
     </Routes>
 
   </>
