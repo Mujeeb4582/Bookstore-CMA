@@ -1,6 +1,5 @@
 import React from 'react';
 import Book from './Book';
-import Form from './form';
 
 const BookList = () => {
   const bookDetails = [
@@ -21,8 +20,6 @@ const BookList = () => {
       <ul>
         {bookDetails.map((book) => <Book key={book.id} book={book} />)}
       </ul>
-      <Form />
-
     </>
   );
 };
