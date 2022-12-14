@@ -93,6 +93,7 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link]()
+    - Under construction
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,7 +176,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **To manage the states using Redux**
 - [ ] **Add the styling to project**
 - [ ] **Interaction with API to store and get data**
 
@@ -214,15 +214,20 @@ Give a ⭐️ if you like this project!
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+- **Why use JSX to build UIs?**
 
-- **[Question_1]**
+  - I use it to build my UIs because JSX allows me to utilize HTML syntax while still preserving JavaScript functionalities and its dynamic nature. This means that I can use JavaScript and HTML to design an application, especially more complex ones, because React is better for building single-page apps and static pages. This flexibility doesn't mean programming on HTML, as each JSX syntax is a JavaScript function call. These calls are necessary because web browsers cannot read JSX, so I employ a JavaScript transpiler, such as Babel, to convert these JSX syntaxes into JavaScript function calls.
 
-  - [Answer_1]
+- **What are the components of React?**
 
-- **[Question_2]**
+  - Components are like JavaScript functions that enable a developer to divide a user interface into reusable and independent parts that are isolated pieces they can use in different developments. There are two types of React components. The first are functional components, or stateless components. Their primary function is to return data, which means they accept information and display it in forms. Some programmers may prefer to use functional components because they're easier to understand and require less code.
 
-  - [Answer_2]
+- **Why use React Redux?**
+
+  - The main reason to use React Redux are:
+    - React Redux is the official UI bindings for react Application. It is kept up-to-date with any API changes to ensure that your React components behave as expected.
+    - It encourages good 'React' architecture.
+    - It implements many performance optimizations internally, which allows to components re-render only when it actually needs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
