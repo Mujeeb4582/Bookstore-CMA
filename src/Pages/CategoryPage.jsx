@@ -6,18 +6,19 @@ const CategoryPage = () => {
   const status = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
+  const handlebtn = (e) => {
+    e.preventDefault();
+    dispatch(statusChecker());
+  };
+
   return (
     <>
       <h2>{status}</h2>
       <button
         type="button"
-        onClick={(e) => {
-          e.preventDefault();
-          dispatch(statusChecker());
-        }}
+        onClick={handlebtn}
       >
         Check status
-
       </button>
     </>
   );
