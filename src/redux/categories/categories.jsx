@@ -1,6 +1,6 @@
 const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
 
-const initialState = [];
+const initialState = ['Loading....'];
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
