@@ -1,7 +1,16 @@
 const ADD_BOOK = 'book-store/Book/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/Book/REMOVE_BOOK';
 const idCounter = 0;
-const initialState = [];
+const initialState = [{
+  id: 1,
+  bookTitle: 'The Forty Rules of Love',
+  bookAuthor: 'Elif Shafak',
+},
+{
+  id: 2,
+  bookTitle: 'The Hunger Games',
+  bookAuthor: 'Suzanne Collins',
+}];
 
 const remove = (state, bookID) => {
   state.filter((book) => book.id !== bookID);
