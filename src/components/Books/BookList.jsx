@@ -1,19 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const BookList = () => {
-  const bookDetails = [
-    {
-      id: 1,
-      bookTitle: 'The Forty Rules of Love',
-      bookAuthor: 'Elif Shafak',
-    },
-    {
-      id: 2,
-      bookTitle: 'The Hunger Games',
-      bookAuthor: 'Suzanne Collins',
-    },
-  ];
+  const bookDetails = useSelector((state) => state.books);
 
   return (
     <>
