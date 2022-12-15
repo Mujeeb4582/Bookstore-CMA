@@ -4,18 +4,25 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 
 const Book = ({ book }) => {
+  const {
+    id,
+    title,
+    author,
+    category,
+  } = book;
   const dispatch = useDispatch();
 
   const handleRemove = (e) => {
     e.preventDefault();
-    dispatch(removeBook(book.id));
+    dispatch(removeBook(id));
   };
 
   return (
     <li className="bookInfo">
       <div className="book-content">
-        <h2 className="title">{book.bookTitle}</h2>
-        <h2 className="author">{book.bookAuthor}</h2>
+        <h2 className="title">{category}</h2>
+        <h2 className="title">{title}</h2>
+        <h2 className="author">{author}</h2>
         <button type="button">Comments</button>
         <button type="button" onClick={handleRemove}>Remove</button>
         <button type="button">Edit</button>
@@ -40,8 +47,9 @@ const Book = ({ book }) => {
 Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    bookTitle: PropTypes.string.isRequired,
-    bookAuthor: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
