@@ -5,20 +5,32 @@ import { addBook } from '../../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
-  const [bookTitle, setTitle] = useState('');
-  const [bookAuthor, setAuthor] = useState('');
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+
+  const resetForm = () => {
+    setTitle('');
+    setAuthor('');
+    setCategory('');
+  };
 
   const handleForm = (e) => {
     e.preventDefault();
-    if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
-      const payload = { id: uuidv4(), bookTitle, bookAuthor };
+    if (title.trim() !== ''
+    && author.trim() !== ''
+    && category.trim() !== '') {
+      const payload = {
+        id: uuidv4(),
+        title,
+        author,
+        category,
+      };
       dispatch(addBook(payload));
-      setTitle('');
-      setAuthor('');
+      resetForm();
     } else {
-      setTitle('');
-      setAuthor('');
-      alert('Please write book and author name.');
+      resetForm();
+      alert('Please write book, author and category name.');
     }
   };
 
@@ -27,8 +39,27 @@ const Form = () => {
       <h2 className="form-title">ADD NEW BOOK</h2>
 
       <form onSubmit={handleForm}>
-        <input type="text" name="title" value={bookTitle} onChange={(e) => setTitle(e.target.value)} placeholder="Book Title" />
-        <input type="text" name="author" value={bookAuthor} onChange={(e) => setAuthor(e.target.value)} placeholder="Book Author" />
+        <input
+          type="text"
+          name="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Book Title"
+        />
+        <input
+          type="text"
+          name="author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          placeholder="Book Author"
+        />
+        <input
+          type="text"
+          name="category"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder="Book category"
+        />
         <button type="submit">ADD BOOK</button>
       </form>
     </div>
