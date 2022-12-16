@@ -175,8 +175,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add the styling to project**
-- [ ] **Interaction with API to store and get data**
+- [ ] **Add the comments button feature**
+- [ ] **Add the Edit button feature**
+- [ ] **Add the real time interection to updates and number of chapters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
