@@ -36,7 +36,7 @@ const Form = () => {
 
   return (
 
-    <form onSubmit={handleForm} className="flex mt-10 flex-col gap-7 justify-between p-7 border-t-2 border-t-grey-border bg-white">
+    <form onSubmit={handleForm} className="flex mt-10 flex-col gap-7 justify-between p-7 border-t-2 border-t-grey-border">
       <h2 className="text-xl font-bold text-warm-grey">ADD NEW BOOK</h2>
       <div className="flex flex-col lg:flex-row justify-between items-center gap-6 text-base">
         <label
