@@ -10,10 +10,22 @@ const BookList = () => {
     dispatch(getBooks());
   }, [dispatch]);
 
+  const list = () => (bookDetails && bookDetails.map((book) => <Book key={book.id} book={book} />));
+  if (!bookDetails.length) {
+    return (
+      <main className="flex flex-col pb-8 pt-8 px-6 md:px-24 gap-10 bg-slate-200">
+        <section className="book-card flex justify-center items-center bg-dirty-white rounded-sm p-12 shadow-md h-48">
+          <div className="text-3xl font-bold">
+            Please add books
+          </div>
+        </section>
+      </main>
+    );
+  }
   return (
     <>
-      <ul>
-        {bookDetails && bookDetails.map((book) => <Book key={book.id} book={book} />)}
+      <ul className="flex flex-col gap-12 items-center bg-slate-200 w-fit m-auto md:w-full  md:flex-col justify-between px-7 py-8 shadow-slate-600 shadow-md">
+        {list()}
       </ul>
     </>
   );
