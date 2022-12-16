@@ -1,7 +1,7 @@
 {
   "name": "book-store",
   "version": "0.1.0",
-  "homepage": "https://Mujeeb4582.github.io/Bookstore-cma",
+  "homepage": "https://Mujeeb4582.github.io/Bookstore-CMA",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
