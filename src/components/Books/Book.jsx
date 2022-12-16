@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
+import BookProgress from './bookprograss';
 
 const Book = ({ book }) => {
   const {
@@ -11,6 +12,11 @@ const Book = ({ book }) => {
     category,
   } = book;
   const dispatch = useDispatch();
+  const maxChapter = 48;
+  const randomProgress = Math.random();
+  const currentChapter = maxChapter * randomProgress;
+  const chapter = Math.floor(currentChapter);
+  const percent = Math.floor(100 * randomProgress);
 
   const handleRemove = (e) => {
     e.preventDefault();
@@ -18,29 +24,31 @@ const Book = ({ book }) => {
   };
 
   return (
-    <li className="bookInfo">
-      <div className="book-content">
-        <h2 className="title">{category}</h2>
-        <h2 className="title">{title}</h2>
-        <h2 className="author">{author}</h2>
-        <button type="button">Comments</button>
-        <button type="button" onClick={handleRemove}>Remove</button>
-        <button type="button">Edit</button>
+    <>
+      <div className="flex flex-col gap-12 items-center bg-white w-fit m-auto md:w-full  md:flex-row justify-between rounded-sm px-7 py-8 shadow-md">
+        <li className="flex flex-col gap-6 justify-between items-start w-72 ">
+          <div className="flex flex-col gap-0">
+            <span className="font-bold text-sm text-black-two opacity-50">
+              {category}
+            </span>
+            <h3 className="text-xl font-bold font-roboto">
+              {title}
+            </h3>
+            <span className="text-sm font-light text-azure font-roboto">
+              {author}
+            </span>
+          </div>
+          <div className="flex gap-2 justify-center items-center text-gray-300">
+            <button type="button" className="text-m font-light text-azure font-roboto cursor-pointer">Comments</button>
+            <span className="text-black-border px-1">|</span>
+            <button type="button" onClick={handleRemove} className="text-m font-light text-azure font-roboto cursor-pointer">Remove</button>
+            <span className="text-black-border px-1">|</span>
+            <button type="button" className="text-m font-light text-azure font-roboto cursor-pointer">Edit</button>
+          </div>
+        </li>
+        <BookProgress percent={percent} chapter={`Chapter ${chapter}`} />
       </div>
-      <div className="progress-stat">
-        <div className="progress-icon" />
-        <h1 className="percentage">50%</h1>
-        <h5 className="completed">completed</h5>
-      </div>
-      <div className="divider" />
-      <div className="chapter">
-        <h5>CURRENT CHAPTER</h5>
-        <h4>Chapter 10</h4>
-      </div>
-      <div>
-        <button type="button" className="update-progress">UPDATE PROGRESS</button>
-      </div>
-    </li>
+    </>
   );
 };
 
