@@ -7,7 +7,7 @@ import CategoryPage from './Pages/CategoryPage';
 const App = () => (
   <>
     <Router>
-      <main className="w-full h-full font-montserrat bg-slate-100">
+      <main className="w-full h-full font-montserrat  bg-dirty-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<BooksPage />} />
