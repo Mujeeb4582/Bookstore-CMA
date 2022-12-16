@@ -13,13 +13,17 @@ const CategoryPage = () => {
 
   return (
     <>
-      <h2>{status}</h2>
-      <button
-        type="button"
-        onClick={handlebtn}
-      >
-        Check status
-      </button>
+      <main className="h-[80vh] w-full flex flex-col gap-3   justify-center items-center">
+        <h2 className=" bg-inherit w-fit text-center text-3xl text-red-600">{status}</h2>
+        <button
+          type="button"
+          className="text-dirty-white bg-azure my-4 rounded w-fit font-light font-roboto px-12 py-3 text-base font-bold"
+          onClick={handlebtn}
+        >
+          Check status
+        </button>
+
+      </main>
     </>
   );
 };
