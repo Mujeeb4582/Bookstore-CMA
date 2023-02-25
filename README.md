@@ -1,27 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![HTML](https://img.shields.io/badge/-HTML-orange) ![CSS](https://img.shields.io/badge/-CSS-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Webpack](https://img.shields.io/badge/-Webpack-green) ![React.js](https://img.shields.io/badge/-React.js-black)
@@ -57,6 +35,9 @@ After you're finished please remove all the comments and instructions!
 # 📖 [Bookstore CMS] <a name="about-project"></a>
 
 > Bookstore CMS is an SPA made for all the book lovers. It provides an easy way to organize a collection of book, as well as progress tracking functionalities. For instance, a user can easily add a new book by providing a book title and the category. It is built using React.js.
+
+## ScreenShot
+![BookStoreCMA](https://user-images.githubusercontent.com/109666020/221373541-9bd0ac0a-5c0f-4e19-b430-b6c81ba1f2bd.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
