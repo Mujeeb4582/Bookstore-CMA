@@ -103,7 +103,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Mujeeb4582/Bookstore-CMA.git
+  git clone git@github.com:Mujeeb4582/Bookstore-CMA.git
 ```
 
 ### Install
